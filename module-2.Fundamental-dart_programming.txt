@@ -1,0 +1,195 @@
+Module - 2
+Fundamental - Dart Programming
+Theoretical Questions  ( 1 to 31 ) 
+
+1) What is inheritance?
+-   Inheritance in dart is defined as the process in which one class derive the properties and characteristics of another class. It is helpful as it provides an ability with which we can create a new class from an existing class.
+-  With the help of Inheritance, one class can make use of all the properties and characteristics of another class.
+-  In general, two classes are required for inheritance and these mainly are ?
+1. Parent class - A class that is inherited by the other class is known as the parent class. Sometimes, we also refer it to as the base class.
+2. Child class - A class that inherits the properties and characteristics of the parent class is known as child class.
+-  There are different types of inheritance that are possible in Dart. Mainly these are ?
+1.Single level inheritance
+2.Multi-level inheritance
+3.Hierarchal inheritance
+
+2) Which inheritance is not supported by Dart? Why? 
+-  Unfortunately, Dart doesn't support multiple inheritance, which means a class cannot extend more than one class.
+
+3) What is advantage of inheritance?
+-  It promotes reusability of the code and reduces redundant code.
+-  It helps to design a program in a better way.
+-  It makes code simpler, cleaner and saves time and money on maintenance.
+-  It facilitates the creation of class libraries.
+
+4) Difference between inheritance and encapsulation.
+-  Inheritance
+-   Inheritance is the process or mechanism by which you can acquire the properties and behavior of a class into another class.
+-  Inheritance indicates that a child class (subclass) inherits all the attributes and methods from a parent class (superclass).
+-   The properties of a class can be inherited and extended by other classes or functions. 
+-  Encapsulation
+-  This is a programming style where implementation details are hidden
+-  Encapsulation can be viewed as a shield that protects data from getting accessed by outside code
+-  Encapsulation refers to the winding of data into a single unit which is known as class.
+-  Encapsulation indicates that one class must not have access to the (private) data of another class.
+
+5) Difference between inheritance and abstraction.
+-  Inheritance
+-   Inheritance is the process or mechanism by which you can acquire the properties and behavior of a class into another class.
+-  Inheritance indicates that a child class (subclass) inherits all the attributes and methods from a parent class (superclass).
+-   The properties of a class can be inherited and extended by other classes or functions. 
+- inheritance allows using properties and methods of an already existing class
+-  abstraction.
+-  Abstraction is an OOP concept that hides the implementation details and shows only the functionality to the user
+-   abstraction helps to reduce the complexity of the code
+-  Firstly, an abstract class can consist of abstract and non-abstract methods
+-  abstraction helps to reduce the complexity of the system
+
+6) Difference between inheritance and polymorphism.
+-  Inheritance
+-  Inheritance is one in which a new class is created (derived class) that inherits the features from the already existing class(Base class).
+-  It is basically applied to classes.
+-  Inheritance supports the concept of reusability and reduces code length in object-oriented programming.
+-  Inheritance can be single, hierarchical and multilevel inheritance.
+-  It is used in pattern designing.
+-  Example :
+The class bike can be inherit from the class of two-wheel vehicles, which is turn could be a subclass of vehicles
+-  polymorphism
+-  Whereas polymorphism is that which can be defined in multiple forms.
+-  Whereas it is basically applied to functions or methods.
+-  Polymorphism allows the object to decide which form of the function to implement at compile-time (overloading) as well as run-time (overriding)
+-  Whereas it can be compiled-time polymorphism (overload) as well as run-time polymorphism (overriding).
+-  While it is also used in pattern designing.
+-  Example : 
+The class bike can have method name set_color(), which changes the bike’s color based on the name of color you have entered.
+
+7) Can we override static method in Dart?
+-  You can't override static methods. The two static methods you declared there are in fact two different static methods, not the same, overriden one.
+
+8) Can we overload static method in Dart?
+-  The answer is 'Yes'. We can have two or more static methods with the same name, but differences in input parameters. 
+
+9)  Can a class implement more than one interface?
+- Yes, a class in many object-oriented programming languages, including Dart, can implement multiple interfaces. This allows a class to inherit the properties and behaviors defined in multiple interfaces.
+
+10) Can a class extend more than one class in Dart?
+- No, a class in Dart cannot extend more than one class. In Dart, classes can only inherit from a single superclass, meaning that a class can extend only one class. This is because Dart follows the single inheritance principle, which states that a class can only inherit properties and methods from a single parent class.
+
+11) Can an interface extend more than one interface in Dart?
+- Yes, an interface in Dart can extend multiple interfaces. This is sometimes referred to as multiple inheritance of interfaces.
+
+12) What will happen if a class implements two interfaces and they both have a method with same name and signature?
+- If a class implements two interfaces that both have a method with the same name and signature, then the class must provide an implementation for that method. This implementation will be used for both of the methods declared in the interfaces.
+
+13) Can we pass an object of a subclass to a method expecting an object of the super class?
+-  Yes, you can pass an object of a subclass to a method that expects an object of the superclass. This is known as polymorphism, and it's a fundamental concept in object-oriented programming.
+In object-oriented programming, a subclass is considered to be a type of its superclass, so an object of a subclass can be used wherever an object of the superclass is expected. This allows you to write generic code that can work with objects of multiple types, even if they are subclasses of the same superclass. 
+
+14) Are static members inherited to sub classes?
+- No, static members are not inherited by subclasses in Dart. Static members, also known as class-level members, are associated with the class itself, rather than with individual instances of the class.
+When you define a static member in a class, it is not automatically available in any subclasses of that class. To access a static member in a subclass, you must use the fully qualified name of the member, including the name of the class in which it is defined.
+
+15) What happens if the parent and the child class have a field with same identifier? 
+-  In Dart, if a parent class and a child class both have a field with the same identifier, the child class will hide the field in the parent class.
+When a child class declares a field with the same name as a field in its parent class, the field in the child class is said to "shadow" the field in the parent class. The field in the parent class can still be accessed, but it must be done using the fully qualified name of the field, including the name of the class in which it is declared.
+
+16) Are constructors and initializers also inherited to sub classes?
+-  In Dart, constructors are not inherited by default, but they can be explicitly extended or overridden in the subclass using the super keyword. Similarly, initializers are not inherited by default, but they can be invoked in the subclass using the super keyword as well.
+
+17) How do you restrict a member of a class from inheriting by its sub classes?
+- In Dart, you can prevent a member of a class from being inherited by its subclasses by marking it as final. When a member is marked as final, it cannot be overridden or hidden by a subclass
+
+18) How do you implement multiple inheritance in Dart? Can a class extend by itself in Dart?
+- Dart does not support multiple inheritance, which means that a class cannot directly inherit from multiple superclasses. This is because multiple inheritance can lead to ambiguity and other design issues. However, Dart supports mixin-based inheritance, which allows a class to inherit behavior from multiple mixins.
+- To use mixin-based inheritance in Dart, you can define a mixin as a class that contains a set of methods and properties that can be mixed into another class using the with keyword. 
+- Regarding the question if a class can extend itself in Dart, the answer is no. A class cannot extend or inherit from itself, as it would create a circular dependency and result in an infinite loop.
+
+19) How do you override a private method in Dart?
+- In Dart, you cannot override a private method in a subclass because private members are only accessible within the library where they are defined. Private members are identified by a leading underscore character in their names.
+- If you try to override a private method in a subclass, you will get a compile-time error. 
+- To allow subclasses to customize the behavior of a method, you can make the method protected instead of private. Protected members are identified by a leading underscore character followed by a lowercase letter. Protected members can be accessed by subclasses, but they are not visible outside the library where they are defined.
+
+20) When to overload a method in Dart and when to override it?
+-  Method overloading is used when you want to define multiple methods with the same name but with different parameter lists. This can be useful when you want to provide flexibility in the number or types of arguments that can be passed to a method. When a method is overloaded, the appropriate method to call is determined at compile-time based on the number and types of arguments passed.
+
+-  Method overriding, on the other hand, is used when you want to provide a new implementation for a method that is already defined in a superclass. This is useful when you want to customize the behavior of a method for a specific subclass. When a method is overridden, the implementation in the subclass is called instead of the implementation in the superclass.
+
+21) What the order is of extends and implements keyword on Dart class declaration?
+-  In Dart, when declaring a class, the extends keyword should come before the with keyword, which should come before the implements keyword.
+-  Here is an example of the correct order of these keywords in a Dart class declaration:
+class MyClass extends MySuperClass with MyMixin implements MyInterface {
+  // Class implementation
+}
+-  In this example, MyClass extends MySuperClass, uses the mixin MyMixin with the with keyword, and implements the interface MyInterface with the implements keyword.
+-  It's important to note that a class can have at most one superclass, any number of mixins, and any number of interfaces. Therefore, the order of the keywords is important to specify the correct relationships between the class, its superclass, mixins, and interfaces.
+
+B.23) How do you prevent overriding a Dart method without using the final modifier?
+- In Dart, the final modifier can be used to prevent a method from being overridden in a subclass. However, if you want to prevent a method from being overridden without using the final modifier, you can use the @nonVirtual annotation.
+The @nonVirtual annotation can be added to a method in a superclass to indicate that it should not be overridden in a subclass. When a subclass attempts to override a method that is annotated with @nonVirtual, the Dart analyzer will generate a warning to alert the developer.
+
+B.24) What are the rules of method overriding in Dart?
+-  In Dart, when a subclass overrides a method from a superclass, there are some rules that must be followed to ensure that the overridden method behaves correctly. Here are the rules for method overriding in Dart:
+1. The name of the overridden method must be the same as the name of the superclass method.
+2. The return type of the overridden method must be covariant with the return type of the superclass method. This means that the return type of the overridden method must be the same or a subtype of the return type of the superclass method.
+3. The parameter list of the overridden method must be contravariant with the parameter list of the superclass method. This means that the parameter types of the overridden method must be the same or supertypes of the parameter types of the superclass method. Additionally, the overridden method may have fewer required parameters than the superclass method.
+4. The @override annotation must be used to indicate that a method is intended to override a superclass method. This annotation is optional, but it's considered good practice to use it to make the code easier to understand.
+
+22) Difference between method overriding and overloading in Dart.
+-  Method overriding is the process of providing a new implementation for an existing method in a superclass, by defining a method with the same name and signature in a subclass. When a subclass overrides a method, the implementation of the superclass method is replaced with the implementation of the subclass method. The purpose of method overriding is to provide a new implementation of a method in a subclass that is specific to the subclass, but still maintains the same interface as the superclass method.
+-  Method overloading, on the other hand, is the process of defining multiple methods in a class with the same name, but with different parameter lists. Each overloaded method must have a unique signature that includes the method name and the number, types, and order of its parameters. The purpose of method overloading is to provide multiple methods with the same name that perform different operations based on the arguments passed to them.
+-  In summary, method overriding is used to provide a new implementation of an existing method in a subclass, while method overloading is used to define multiple methods with the same name that perform different operations based on their parameter lists.
+
+23) What happens when a class implements two interfaces and both declare field (variable) with same name?
+-  In Dart, when a class implements two interfaces and both interfaces declare a field (variable) with the same name, the class must provide an implementation for that field that satisfies the requirements of both interfaces. This is known as a field conflict, and it can be resolved in one of two ways:
+1. Using the super keyword to access the field from one of the interfaces. If the two fields have the same name but different types, you can use the as keyword to cast the value to the correct type.
+2. Renaming one or both of the fields in the interfaces. If the two fields have the same name and type, you can simply rename one of the fields to avoid the conflict.
+In summary, when a class implements two interfaces and both interfaces declare a field with the same name, the class must provide an implementation that satisfies the requirements of both interfaces. This can be done by using the super keyword to access the fields from both interfaces, or by renaming one or both of the fields to avoid the conflict.
+
+24) Can a subclass instance method override a superclass static method? 
+- No, a subclass instance method cannot override a superclass static method in Dart.
+
+25) Can a subclass static method hide superclass instance method?
+- Yes, a subclass static method can hide a superclass instance method in Dart.
+
+26) Can a superclass access subclass member?
+- No, a superclass cannot directly access subclass members in Dart.
+In object-oriented programming, a subclass inherits all the members (fields, methods, and nested classes) of its superclass, but not vice versa. This means that a subclass can access all the members of its superclass, but a superclass cannot access the members of its subclasses. 
+
+27) Difference between object oriented and object based language.
+- The terms "object-oriented language" and "object-based language" are sometimes used to describe programming languages, and while there is no universally agreed-upon definition of these terms, they are generally used to describe languages with different levels of support for object-oriented programming.
+- An object-oriented language is a programming language that fully supports all of the core features of object-oriented programming (OOP), such as encapsulation, inheritance, and polymorphism. Examples of object-oriented languages include Java, C++, Python, and Ruby.
+- On the other hand, an object-based language is a programming language that has some support for object-oriented programming, but may not support all of the features of OOP. Typically, object-based languages support objects and their associated methods, but may not support inheritance or other features of OOP. Examples of object-based languages include JavaScript and Visual Basic.
+- In summary, an object-oriented language provides full support for OOP, while an object-based language provides partial support for OOP and may have limitations compared to a full-fledged object-oriented language.
+
+28) Explain Diamond problem.
+-  Dart is an object-oriented programming language that supports single inheritance, which means a class can inherit from a single superclass. Therefore, the Diamond problem does not occur in Dart as it is not possible to have multiple inheritance in the language.
+-  However, Dart provides a concept called mixins, which can be used to achieve some of the benefits of multiple inheritance. Mixins allow classes to reuse code from other classes without having to inherit from them. This is achieved by adding the mixin class as a "with" clause in the class declaration.
+-  Even though mixins in Dart can be used to inherit behavior from multiple classes, they do not result in the Diamond problem, as the order of the mixin application is fixed and conflicts are resolved by the order in which the mixins are listed.
+-  In other words, Dart's mixins are designed to avoid the Diamond problem altogether, by providing a safe way to reuse code from multiple sources without introducing ambiguity or conflicts in the inheritance hierarchy
+
+29) Why Dart does not support operator overloading ?
+-  Dart is a modern, object-oriented programming language that provides many features to make programming more efficient and flexible. However, one feature that is not supported in Dart is operator overloading. Operator overloading is the ability to redefine the behavior of operators such as +, -, *, and /, for user-defined types.
+-  There are several reasons why Dart does not support operator overloading:
+-  Clarity and Readability: One of the main reasons why Dart does not support operator overloading is to maintain clarity and readability of the code. Overloading operators can make the code harder to read and understand, especially when the overloaded operators behave differently than their usual meaning.
+-  Reduced Complexity: Operator overloading can make the language more complex and difficult to learn, especially for new programmers. By avoiding operator overloading, Dart is able to maintain its simplicity and ease of use.
+-  Consistency: By avoiding operator overloading, Dart is able to maintain consistency across the language. All operators behave in the same way, which helps make code easier to read and maintain.
+-  Safety: Operator overloading can lead to unintended consequences, such as producing unexpected results or errors. By avoiding operator overloading, Dart is able to ensure that code behaves predictably and safely.
+-  Instead of operator overloading, Dart provides named methods to perform specific operations on objects. For example, the "+" operator can be replaced with a "plus" method, which can be called on an object to perform addition. This approach provides similar functionality to operator overloading while maintaining clarity and readability in the code
+
+30) What is Encapsulation in Dart?
+-  Encapsulation is one of the fundamental concepts of object-oriented programming and it refers to the practice of hiding the internal details of an object and exposing only what is necessary for the external world to use. In Dart, encapsulation is achieved through the use of access modifiers.
+-  Access modifiers are keywords that are used to restrict access to certain class members, such as fields and methods. Dart provides two access modifiers:
+1. Public: Members declared as public are accessible from any part of the program. In Dart, a member is public by default.
+2. Private: Members declared as private are accessible only within the class where they are defined. In Dart, a member can be made private by prefixing an underscore (_) before its name.
+-  By using private members, classes can hide their internal implementation details and only expose the necessary interface to the outside world. This makes the code more secure and easier to maintain, as it reduces the risk of external code interfering with the internal workings of a class.
+-  In addition to public and private access modifiers, Dart also provides the protected access modifier, which restricts access to a member to the class and its subclasses. However, in Dart, the protected modifier is not yet fully supported and has limited functionality.
+-  In summary, encapsulation is an important principle in object-oriented programming that helps improve the quality and security of code. In Dart, it is achieved through the use of access modifiers, which restrict the visibility of class members and help to hide the internal details of a class.
+
+31) Which of the Dart OOPS feature promotes access protection or data hiding?
+-  In Dart, access protection and data hiding are promoted through the use of access modifiers, which are a feature of object-oriented programming.
+-  Dart provides two access modifiers:
+1. Public: Members declared as public are accessible from any part of the program. In Dart, a member is public by default.
+2. Private: Members declared as private are accessible only within the class where they are defined. In Dart, a member can be made private by prefixing an underscore (_) before its name.
+-  By using private members, classes can hide their internal implementation details and only expose the necessary interface to the outside world. This makes the code more secure and easier to maintain, as it reduces the risk of external code interfering with the internal workings of a class.
+-  In addition to public and private access modifiers, Dart also provides the protected access modifier, which restricts access to a member to the class and its subclasses. However, in Dart, the protected modifier is not yet fully supported and has limited functionality.
+Therefore, the use of access modifiers in Dart promotes access protection and data hiding, which are important principles of object-oriented programming. By restricting access to class members, developers can prevent unwanted modifications to the internal state of an object and ensure that the object behaves as intended.
